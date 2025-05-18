@@ -190,7 +190,21 @@ def setup_driver():
     options.add_argument("--disable-gpu")
     options.add_argument("--window-size=1920,1080")
     options.add_argument("--no-sandbox")
-    return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    options.add_argument("--disable-dev-shm-usage")
+    
+    try:
+        # 首先尝试使用 ChromeDriverManager
+        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    except Exception as e:
+        logging.warning(f"ChromeDriverManager 安装失败: {e}")
+        try:
+            # 如果失败，尝试直接使用 Chrome
+            driver = webdriver.Chrome(options=options)
+        except Exception as e:
+            logging.error(f"Chrome 启动失败: {e}")
+            raise
+    
+    return driver
 
 def crawl_bing_images(keyword, limit=10):
     # 创建必要的目录
