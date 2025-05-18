@@ -1,0 +1,31 @@
+# 通用配置
+common:
+  save_dir: "pic"  # 图片保存根目录
+
+# Google图片爬虫配置
+google:
+  keyword: "soil"
+  skip: 0  # 跳过前N张图片
+  limit: 50  # 下载M张图片
+  subdir: "google"  # 保存子目录
+
+# 百度图片爬虫配置（土壤）
+baidu_soil:
+  keyword: "土壤"
+  skip: 0
+  limit: 500
+  subdir: "baidu_soil"
+
+# 百度图片爬虫配置（泥土）
+baidu_mud:
+  keyword: "泥土"
+  skip: 0
+  limit: 500
+  subdir: "baidu_mud"
+
+# Bing图片爬虫配置
+bing:
+  keyword: "土壤"
+  skip: 0
+  limit: 500
+  subdir: "bing" 
