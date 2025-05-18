@@ -196,32 +196,19 @@ def download_images_from_baidu(keyword, num_images):
                     img_element = driver.find_element(By.CSS_SELECTOR, "img[title='点击查看图片来源']")
                     
                     # 获取图片尺寸
-                    width = img_element.get_attribute("width")
-                    height = img_element.get_attribute("height")
+                    # width = img_element.get_attribute("width")
+                    # height = img_element.get_attribute("height")
                     
-                    # 如果无法从属性获取尺寸，尝试从style属性获取
-                    if not width or not height:
-                        style = img_element.get_attribute("style")
-                        if style:
-                            import re
-                            width_match = re.search(r'width:\s*(\d+)px', style)
-                            height_match = re.search(r'height:\s*(\d+)px', style)
-                            if width_match and height_match:
-                                width = width_match.group(1)
-                                height = height_match.group(1)
-                    
-                    # 检查图片尺寸
-                    if width and height:
-                        width = int(width)
-                        height = int(height)
-                        if width < 512 or height < 512:
-                            logging.debug(f"跳过小尺寸图片: {width}x{height}")
-                            pbar.update(1)
-                            continue
-                    else:
-                        logging.warning("无法获取图片尺寸，跳过下载")
-                        pbar.update(1)
-                        continue
+                    # # 如果无法从属性获取尺寸，尝试从style属性获取
+                    # if not width or not height:
+                    #     style = img_element.get_attribute("style")
+                    #     if style:
+                    #         import re
+                    #         width_match = re.search(r'width:\s*(\d+)px', style)
+                    #         height_match = re.search(r'height:\s*(\d+)px', style)
+                    #         if width_match and height_match:
+                    #             width = width_match.group(1)
+                    #             height = height_match.group(1)
                     
                     img_url = img_element.get_attribute("src")
                     if not img_url:
@@ -278,5 +265,5 @@ def download_images_from_baidu(keyword, num_images):
     logging.info(f"图片保存在目录：{base_dir}/")
 
 if __name__ == "__main__":
-    download_images_from_baidu("风景", 10) 
+    download_images_from_baidu("泥土", 1000) 
     
