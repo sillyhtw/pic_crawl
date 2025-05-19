@@ -9,6 +9,10 @@ from datetime import datetime
 from tqdm import tqdm
 import json
 import urllib.parse
+import random
+import cv2
+import numpy as np
+import argparse
 
 # 创建必要的目录
 def create_directories():
@@ -142,8 +146,10 @@ def download_images_from_baidu(keyword, num_images):
 
     driver = webdriver.Chrome(options=chrome_options)
     base_dir = f"downloads/baidu_{keyword}"
+    invalid_dir = os.path.join(base_dir, "invalid")
     os.makedirs(base_dir, exist_ok=True)
-    logging.info(f"创建保存目录: {base_dir}")
+    os.makedirs(invalid_dir, exist_ok=True)
+    logging.info(f"创建保存目录: {base_dir} 和 {invalid_dir}")
 
     search_url = f"https://image.baidu.com/search/index?tn=baiduimage&word={urllib.parse.quote(keyword)}"
     logging.debug(f"访问搜索页面: {search_url}")
@@ -229,8 +235,26 @@ def download_images_from_baidu(keyword, num_images):
 
                     try:
                         img_data, size, speed, download_time = download_image(img_url)
-                        filename = f"{image_count + 1}.jpg"
-                        filepath = os.path.join(base_dir, filename)
+                        
+                        # 使用OpenCV检查图片尺寸
+                        nparr = np.frombuffer(img_data, np.uint8)
+                        img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+                        if img is None:
+                            raise Exception("无法解码图片")
+                        height, width = img.shape[:2]
+                        
+                        # 生成文件名：unix时间戳 + 随机数
+                        timestamp = int(time.time())
+                        random_num = random.randint(1000, 9999)
+                        filename = f"{timestamp}_{random_num}.jpg"
+                        
+                        # 根据尺寸决定保存位置
+                        if width >= 512 and height >= 512:
+                            filepath = os.path.join(base_dir, filename)
+                        else:
+                            filepath = os.path.join(invalid_dir, filename)
+                            logging.info(f"图片尺寸不符合要求 ({width}x{height})，保存到invalid目录")
+                        
                         with open(filepath, "wb") as f:
                             f.write(img_data)
                         
@@ -238,7 +262,7 @@ def download_images_from_baidu(keyword, num_images):
                         save_downloaded_url(keyword, img_url, filename)
                         
                         total_download_size += size
-                        logging.info(f"图片 {image_count + 1} 下载成功 - 大小: {size/1024:.1f}KB, 速度: {speed:.2f}MB/s, 耗时: {download_time:.2f}秒")
+                        logging.info(f"图片 {filename} 下载成功 - 大小: {size/1024:.1f}KB, 速度: {speed:.2f}MB/s, 耗时: {download_time:.2f}秒")
                         image_count += 1
                         pbar.update(1)
                         # 更新进度条描述，显示预计剩余时间
@@ -265,5 +289,4 @@ def download_images_from_baidu(keyword, num_images):
     logging.info(f"图片保存在目录：{base_dir}/")
 
 if __name__ == "__main__":
-    download_images_from_baidu("泥土", 1000) 
-    
+    download_images_from_baidu("soil", 1000) 
