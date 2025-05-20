@@ -1,0 +1,78 @@
+2025-05-20 19:43:19,916 - INFO - 开始下载关键词 '石头' 的图片，目标数量: 100
+2025-05-20 19:43:19,916 - INFO - 开始下载关键词 '泥土' 的图片，目标数量: 100
+2025-05-20 19:43:19,916 - INFO - 已下载图片数量: 0
+2025-05-20 19:43:19,916 - INFO - 开始下载关键词 '沙子' 的图片，目标数量: 100
+2025-05-20 19:43:19,916 - INFO - 已下载图片数量: 0
+2025-05-20 19:43:19,916 - INFO - 已下载图片数量: 0
+2025-05-20 19:43:19,917 - DEBUG - Selenium Manager binary found at: /Users/junshuai.wang/Code/playground/pic_crawl/venv/lib/python3.13/site-packages/selenium/webdriver/common/macos/selenium-manager
+2025-05-20 19:43:19,917 - DEBUG - Selenium Manager binary found at: /Users/junshuai.wang/Code/playground/pic_crawl/venv/lib/python3.13/site-packages/selenium/webdriver/common/macos/selenium-manager
+2025-05-20 19:43:19,917 - DEBUG - Selenium Manager binary found at: /Users/junshuai.wang/Code/playground/pic_crawl/venv/lib/python3.13/site-packages/selenium/webdriver/common/macos/selenium-manager
+2025-05-20 19:43:19,917 - DEBUG - Executing process: /Users/junshuai.wang/Code/playground/pic_crawl/venv/lib/python3.13/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --debug --language-binding python --output json
+2025-05-20 19:43:19,917 - DEBUG - Executing process: /Users/junshuai.wang/Code/playground/pic_crawl/venv/lib/python3.13/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --debug --language-binding python --output json
+2025-05-20 19:43:19,917 - DEBUG - Executing process: /Users/junshuai.wang/Code/playground/pic_crawl/venv/lib/python3.13/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --debug --language-binding python --output json
+2025-05-20 19:43:23,287 - DEBUG - Sending stats to Plausible: Props { browser: "chrome", browser_version: "", os: "macos", arch: "arm64", lang: "python", selenium_version: "4.18" }
+2025-05-20 19:43:23,287 - DEBUG - chromedriver not found in PATH
+2025-05-20 19:43:23,287 - DEBUG - chrome detected at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2025-05-20 19:43:23,287 - DEBUG - Running command: /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --version
+2025-05-20 19:43:23,287 - DEBUG - Output: "Google Chrome 136.0.7103.114 "
+2025-05-20 19:43:23,287 - DEBUG - Detected browser: chrome 136.0.7103.114
+2025-05-20 19:43:23,287 - DEBUG - Discovering versions from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
+2025-05-20 19:43:23,287 - DEBUG - Required driver: chromedriver 136.0.7103.94
+2025-05-20 19:43:23,287 - DEBUG - chromedriver 136.0.7103.94 already in the cache
+2025-05-20 19:43:23,288 - DEBUG - Driver path: /Users/junshuai.wang/.cache/selenium/chromedriver/mac-arm64/136.0.7103.94/chromedriver
+2025-05-20 19:43:23,288 - DEBUG - Browser path: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2025-05-20 19:43:23,288 - DEBUG - Using driver at: /Users/junshuai.wang/.cache/selenium/chromedriver/mac-arm64/136.0.7103.94/chromedriver
+2025-05-20 19:43:23,296 - DEBUG - Started executable: `/Users/junshuai.wang/.cache/selenium/chromedriver/mac-arm64/136.0.7103.94/chromedriver` in a child process with pid: 96582 using 0 to output -3
+2025-05-20 19:43:23,608 - DEBUG - Sending stats to Plausible: Props { browser: "chrome", browser_version: "", os: "macos", arch: "arm64", lang: "python", selenium_version: "4.18" }
+2025-05-20 19:43:23,608 - DEBUG - chromedriver not found in PATH
+2025-05-20 19:43:23,608 - DEBUG - chrome detected at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2025-05-20 19:43:23,608 - DEBUG - Running command: /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --version
+2025-05-20 19:43:23,608 - DEBUG - Output: "Google Chrome 136.0.7103.114 "
+2025-05-20 19:43:23,608 - DEBUG - Detected browser: chrome 136.0.7103.114
+2025-05-20 19:43:23,608 - DEBUG - Discovering versions from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
+2025-05-20 19:43:23,608 - DEBUG - Required driver: chromedriver 136.0.7103.94
+2025-05-20 19:43:23,608 - DEBUG - chromedriver 136.0.7103.94 already in the cache
+2025-05-20 19:43:23,608 - DEBUG - Driver path: /Users/junshuai.wang/.cache/selenium/chromedriver/mac-arm64/136.0.7103.94/chromedriver
+2025-05-20 19:43:23,608 - DEBUG - Browser path: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2025-05-20 19:43:23,608 - DEBUG - Using driver at: /Users/junshuai.wang/.cache/selenium/chromedriver/mac-arm64/136.0.7103.94/chromedriver
+2025-05-20 19:43:23,616 - DEBUG - Started executable: `/Users/junshuai.wang/.cache/selenium/chromedriver/mac-arm64/136.0.7103.94/chromedriver` in a child process with pid: 96583 using 0 to output -3
+2025-05-20 19:43:23,875 - DEBUG - POST http://localhost:49241/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', 'args': ['--headless', '--disable-gpu', '--no-sandbox']}}}}
+2025-05-20 19:43:23,877 - DEBUG - Starting new HTTP connection (1): localhost:49241
+2025-05-20 19:43:23,982 - DEBUG - POST http://localhost:49242/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', 'args': ['--headless', '--disable-gpu', '--no-sandbox']}}}}
+2025-05-20 19:43:23,983 - DEBUG - Starting new HTTP connection (1): localhost:49242
+2025-05-20 19:43:24,115 - DEBUG - Sending stats to Plausible: Props { browser: "chrome", browser_version: "", os: "macos", arch: "arm64", lang: "python", selenium_version: "4.18" }
+2025-05-20 19:43:24,115 - DEBUG - chromedriver not found in PATH
+2025-05-20 19:43:24,115 - DEBUG - chrome detected at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2025-05-20 19:43:24,115 - DEBUG - Running command: /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --version
+2025-05-20 19:43:24,115 - DEBUG - Output: "Google Chrome 136.0.7103.114 "
+2025-05-20 19:43:24,116 - DEBUG - Detected browser: chrome 136.0.7103.114
+2025-05-20 19:43:24,116 - DEBUG - Discovering versions from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
+2025-05-20 19:43:24,116 - DEBUG - Required driver: chromedriver 136.0.7103.94
+2025-05-20 19:43:24,116 - DEBUG - chromedriver 136.0.7103.94 already in the cache
+2025-05-20 19:43:24,116 - DEBUG - Driver path: /Users/junshuai.wang/.cache/selenium/chromedriver/mac-arm64/136.0.7103.94/chromedriver
+2025-05-20 19:43:24,116 - DEBUG - Browser path: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2025-05-20 19:43:24,116 - DEBUG - Using driver at: /Users/junshuai.wang/.cache/selenium/chromedriver/mac-arm64/136.0.7103.94/chromedriver
+2025-05-20 19:43:24,123 - DEBUG - Started executable: `/Users/junshuai.wang/.cache/selenium/chromedriver/mac-arm64/136.0.7103.94/chromedriver` in a child process with pid: 96592 using 0 to output -3
+2025-05-20 19:43:24,139 - DEBUG - POST http://localhost:49243/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', 'args': ['--headless', '--disable-gpu', '--no-sandbox']}}}}
+2025-05-20 19:43:24,140 - DEBUG - Starting new HTTP connection (1): localhost:49243
+2025-05-20 19:43:30,211 - DEBUG - http://localhost:49243 "POST /session HTTP/1.1" 200 0
+2025-05-20 19:43:30,213 - DEBUG - http://localhost:49242 "POST /session HTTP/1.1" 200 0
+2025-05-20 19:43:30,214 - DEBUG - http://localhost:49241 "POST /session HTTP/1.1" 200 0
+2025-05-20 19:43:30,214 - DEBUG - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"136.0.7103.114","chrome":{"chromedriverVersion":"136.0.7103.94 (fa0be0b33debeb378a8e6ad9c599be34e2dc3b37-refs/branch-heads/7103@{#1842})","userDataDir":"/var/folders/9g/6fhc9tv14nvbnhw7ttnqw66w0000gq/T/.org.chromium.Chromium.sZ7lrq"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:49324"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"mac","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"5edc4c93a17e6638c64642682c0d311b"}} | headers=HTTPHeaderDict({'Content-Length': '891', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-20 19:43:30,215 - DEBUG - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"136.0.7103.114","chrome":{"chromedriverVersion":"136.0.7103.94 (fa0be0b33debeb378a8e6ad9c599be34e2dc3b37-refs/branch-heads/7103@{#1842})","userDataDir":"/var/folders/9g/6fhc9tv14nvbnhw7ttnqw66w0000gq/T/.org.chromium.Chromium.hNQK2D"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:49323"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"mac","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"5b78d6ebd4747e0ab6cbbe363afe6f7b"}} | headers=HTTPHeaderDict({'Content-Length': '891', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-20 19:43:30,217 - DEBUG - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"136.0.7103.114","chrome":{"chromedriverVersion":"136.0.7103.94 (fa0be0b33debeb378a8e6ad9c599be34e2dc3b37-refs/branch-heads/7103@{#1842})","userDataDir":"/var/folders/9g/6fhc9tv14nvbnhw7ttnqw66w0000gq/T/.org.chromium.Chromium.XsB0Um"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:49322"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"mac","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"ceda179b1b6f7b703de4c4f9164a9429"}} | headers=HTTPHeaderDict({'Content-Length': '891', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-05-20 19:43:30,223 - DEBUG - Finished Request
+2025-05-20 19:43:30,225 - DEBUG - Finished Request
+2025-05-20 19:43:30,227 - DEBUG - Finished Request
+2025-05-20 19:43:30,233 - INFO - 创建保存目录: downloads/baidu_沙子 和 downloads/baidu_沙子/invalid
+2025-05-20 19:43:30,236 - INFO - 创建保存目录: downloads/baidu_泥土 和 downloads/baidu_泥土/invalid
+2025-05-20 19:43:30,253 - DEBUG - 访问搜索页面: https://image.baidu.com/search/index?tn=baiduimage&word=%E6%B2%99%E5%AD%90
+2025-05-20 19:43:30,254 - DEBUG - 访问搜索页面: https://image.baidu.com/search/index?tn=baiduimage&word=%E6%B3%A5%E5%9C%9F
+2025-05-20 19:43:30,255 - DEBUG - POST http://localhost:49243/session/5edc4c93a17e6638c64642682c0d311b/url {'url': 'https://image.baidu.com/search/index?tn=baiduimage&word=%E6%B2%99%E5%AD%90'}
+2025-05-20 19:43:30,256 - DEBUG - POST http://localhost:49242/session/5b78d6ebd4747e0ab6cbbe363afe6f7b/url {'url': 'https://image.baidu.com/search/index?tn=baiduimage&word=%E6%B3%A5%E5%9C%9F'}
+2025-05-20 19:43:30,256 - INFO - 创建保存目录: downloads/baidu_石头 和 downloads/baidu_石头/invalid
+2025-05-20 19:43:30,260 - DEBUG - 访问搜索页面: https://image.baidu.com/search/index?tn=baiduimage&word=%E7%9F%B3%E5%A4%B4
+2025-05-20 19:43:30,263 - DEBUG - POST http://localhost:49241/session/ceda179b1b6f7b703de4c4f9164a9429/url {'url': 'https://image.baidu.com/search/index?tn=baiduimage&word=%E7%9F%B3%E5%A4%B4'}
+2025-05-20 19:43:41,563 - ERROR - 处理关键词 泥土 时发生错误: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-05-20 19:43:41,564 - ERROR - 处理关键词 石头 时发生错误: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-05-20 19:43:41,564 - ERROR - 处理关键词 沙子 时发生错误: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))

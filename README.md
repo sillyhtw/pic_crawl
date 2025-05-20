@@ -10,6 +10,7 @@
 ├── requirements.txt          # 项目依赖
 ├── baidu_crawler.py         # 百度图片爬虫
 ├── bing_crawler.py          # 必应图片爬虫
+├── multi_crawler.py         # 多线程爬虫
 ├── logs/                    # 日志文件目录
 │   └── *.log               # 运行日志文件
 ├── downloads/               # 下载的图片目录
@@ -46,14 +47,21 @@
    - 记录详细的错误信息
    - 自动跳过问题图片
 
+5. 多线程支持
+   - 支持并发爬取多个关键词
+   - 可配置最大线程数
+   - 自动管理线程池
+
 ## 使用方法
 
-1. 安装依赖
+### 1. 安装依赖
+
 ```bash
 pip install -r requirements.txt
 ```
 
-2. 运行爬虫
+### 2. 单线程运行
+
 ```bash
 # 下载百度图片 （可以去代码里最后一行修改要下载的关键词 和 下载的数量 ）
 python baidu_crawler.py
@@ -61,6 +69,22 @@ python baidu_crawler.py
 # 下载必应图片 （可以去代码里最后一行修改要下载的关键词 和 下载的数量）
 python bing_crawler.py
 ```
+
+### 3. 多线程运行
+
+```bash
+# 使用百度搜索引擎，最大3个线程，每个关键词下载100张图片
+python multi_crawler.py --keywords "泥土" "石头" "沙子" --num_images 100 --max_workers 3 --engine baidu
+
+# 使用必应搜索引擎，最大5个线程，每个关键词下载50张图片
+python multi_crawler.py --keywords "泥土" "石头" "沙子" --num_images 50 --max_workers 5 --engine bing
+```
+
+多线程参数说明：
+- `--keywords`: 要搜索的关键词列表（必需参数）
+- `--num_images`: 每个关键词要下载的图片数量（默认：100）
+- `--max_workers`: 最大线程数（默认：3）
+- `--engine`: 搜索引擎选择，可选 'baidu' 或 'bing'（默认：'baidu'）
 
 ## 配置说明
 
@@ -101,6 +125,11 @@ python bing_crawler.py
    - 定期清理日志和调试文件
    - 注意图片存储位置
 
+4. 多线程使用建议
+   - 建议将 `max_workers` 设置为 CPU 核心数的 1-2 倍
+   - 过多的线程可能会导致网络拥塞或触发反爬虫机制
+   - 根据网络条件适当调整线程数
+
 ## 常见问题
 
 1. 裂图处理
@@ -117,3 +146,8 @@ python bing_crawler.py
    - 调整等待时间
    - 控制并发数量
    - 优化存储结构
+
+4. 多线程问题
+   - 如果遇到网络问题，可以适当减少线程数
+   - 适当设置 `num_images` 参数，避免一次下载过多图片
+   - 建议使用稳定的网络连接
